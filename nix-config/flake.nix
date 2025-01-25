@@ -16,7 +16,8 @@
           ./auto-upgrade.nix
           ./bootloader.nix
           ./configuration.nix
-          ./database.nix
+          ./cyber.nix
+	  ./database.nix
           ./disable-nvidia.nix
           ./firewall.nix
           ./fonts.nix
