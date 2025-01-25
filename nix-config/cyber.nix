@@ -21,7 +21,6 @@
   p0f
   pdf-parser
   sleuthkit
-  volatility
 
   ### Hardware ###
   apktool
@@ -61,11 +60,9 @@
   ### Reverse ###
   binutils
   elfutils
-  jd
-  jd-gui
   patchelf
   radare2
-  radare2-cutter
+  cutter
   retdec
   snowman
   valgrind
