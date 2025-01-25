@@ -20,8 +20,6 @@
   git
   p0f
   pdf-parser
-  python39Packages.binwalk
-  python39Packages.distorm3
   sleuthkit
   volatility
 

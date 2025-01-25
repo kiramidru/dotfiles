@@ -1,0 +1,75 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 12px;
+    font-weight: bolder;
+    min-height: 0;
+    padding: 1px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+tooltip {
+    opacity: 0.8;
+    border-radius: 0px;
+}
+
+tooltip label {
+    padding: 10px;
+    color: #ebdbb2;
+}
+
+#custom-icon,
+#workspaces,
+#clock,
+#custom-spotify,
+#pulseaudio,
+#pusleaudio-microphone,
+#cpu,
+#memory,
+#temperature,
+#network,
+#battery,
+#custom-pipe,
+#custom-swaync {
+    border-radius: 0px;
+    color: #ebdbb2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#custom-icon {
+    color: #7eb7e2;
+}
+
+#custom-spotify {
+    color: #1ed760;
+}
+
+#window {
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 12px;
+}
+
+#workspaces button {
+    margin: 1px;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #ebdbb2;
+}
+
+#temperature.critical {
+    background-color: red;
+}
