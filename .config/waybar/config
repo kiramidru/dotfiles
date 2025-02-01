@@ -4,34 +4,26 @@
     "exclusive": true,
     "passthrough": false,
     "position": "top",
-    "spacing": 3,
     "fixed-center": true,
-    "ipc": true,
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
     "margin-bottom": 0,
 
     "modules-left": [
-        "custom/icon",
-        "custom/pipe",
-        "clock",
-        "custom/spotify",
-	    "pulseaudio",
-		"pulseaudio#microphone",
+        "hyprland/workspaces",
+        "hyprland/window",
     ],
 
     "modules-center": [
-        "hyprland/workspaces",
+        "clock",
     ],
 
     "modules-right": [
-	    "cpu",
-	    "temperature",
-	    "memory",
+        "pulseaudio",
+		"pulseaudio#microphone",
 		"network",
 	    "battery",
-	    "custom/pipe",
 	    "custom/swaync",
 	]
 }

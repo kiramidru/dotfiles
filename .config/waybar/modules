@@ -1,22 +1,52 @@
 {
-    "custom/icon": {
-        "format": "{icon}",
-        "format-icons": "",
-        "tooltip": false,
+    "hyprland/workspaces": {
+	    "active-only": false,
+    	"all-outputs": true,
+    	"format": "{icon}",
+    	"show-special": false,
+    	"on-click": "activate",
+    	"format-icons": {
+	   	    "1": "一",
+		    "2": "二",
+		    "3": "三",
+		    "4": "四",
+		    "5": "五",
+			"6": "六",
+		    "7": "七",
+		    "8": "八",
+		    "9": "九",
+		    "10": "十",
+	    },
+		"persistent-workspaces": {
+		    "1": [],
+		    "2": [],
+		    "3": [],
+		    "4": [],
+		    "5": [],
+		}
+    },
+
+    "hyprland/window": {
+        "format": "  {}",
+        "rotate": 0,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*)musheer360@arch:(.*)": " Terminal  ",
+            "(.*) — Mozilla Firefox": " Firefox 󰈹 ",
+            "(.*)Mozilla Firefox": " Firefox 󰈹 ",
+            "(.*)zed-editor(.*)": " ZED 󰨞 ",
+            "(.*)Thunar(.*)": " Files 󰉋 ",
+            "(.*)Spotify(.*)": " Spotify 󰓇 ",
+            "(.*)Steam(.*)": " Steam 󰓓 ",
+            "(.*)(.*)": "  ",
+        },
+        "max-length": 80,
     },
 
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M | %d %b}",
+        "format": "{:%I:%M %p | %d %b %Y}",
         "tooltip": false,
-    },
-
-    "custom/spotify": {
-        "interval": 2,
-        "return-type": "json",
-        "exec": "~/.config/waybar/scripts/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "escape": true
     },
 
     "pulseaudio": {
@@ -45,57 +75,6 @@
         "tooltip-format": "{source_desc} | {source_volume}%",
     },
 
-    "hyprland/workspaces": {
-	    "active-only": false,
-    	"all-outputs": true,
-    	"format": "{icon}",
-    	"show-special": false,
-    	"on-click": "activate",
-    	"format-icons": {
-	   	    "1": "一",
-		    "2": "二",
-		    "3": "三",
-		    "4": "四",
-		    "5": "五",
-			"6": "六",
-		    "7": "七",
-		    "8": "八",
-		    "9": "九",
-		    "10": "十",
-	    },
-		"persistent-workspaces": {
-		    "1": [],
-		    "2": [],
-		    "3": [],
-		    "4": [],
-		    "5": [],
-		}
-    },
-
-    "cpu": {
-        "format": "{usage}% ",
-        "interval": 1,
-        "on-click-right": "gnome-system-monitor"
-    },
-
-     "temperature": {
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": {
-            "default": ["", "", "", "", ""],
-        },
-        "format-critical": "{temperatureC}°C {icon}",
-        "critical-threshold": 82,
-        "interval": 10,
-        "hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-    },
-
-    "memory": {
-        "interval": 10,
-        "format": "{percentage}% ",
-        "tooltip": true,
-        "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
-    },
-
     "network": {
         "tooltip": true,
         "format-wifi": "{essid}  ",
@@ -121,15 +100,9 @@
         "format-icons": [ "󰂎", "󰁺", "󰁻",  "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
     },
 
-    "custom/pipe": {
-        "format": "{icon}",
-        "format-icons": "|",
-        "tooltip": false,
-    },
-
     "custom/swaync": {
         "tooltip":true,
-        "format": "{icon} ",
+        "format": "{icon}",
         "format-icons": {
             "notification": "<span foreground='red'><sup></sup></span>",
             "none": "",
