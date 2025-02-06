@@ -6,16 +6,16 @@
     	"show-special": false,
     	"on-click": "activate",
     	"format-icons": {
-	   	    "1": "一",
-		    "2": "二",
-		    "3": "三",
-		    "4": "四",
-		    "5": "五",
-			"6": "六",
-		    "7": "七",
-		    "8": "八",
-		    "9": "九",
-		    "10": "十",
+	   	    "1": "፩",
+		    "2": "፪",
+		    "3": "፫",
+		    "4": "፬",
+		    "5": "፭",
+			"6": "፮",
+		    "7": "፯",
+		    "8": "፰",
+		    "9": "፱",
+		    "10": "፲",
 	    },
 		"persistent-workspaces": {
 		    "1": [],
@@ -27,7 +27,7 @@
     },
 
     "hyprland/window": {
-        "format": "  {}",
+        "format": "   {}",
         "rotate": 0,
         "separate-outputs": true,
         "rewrite": {
@@ -38,7 +38,6 @@
             "(.*)Thunar(.*)": " Files 󰉋 ",
             "(.*)Spotify(.*)": " Spotify 󰓇 ",
             "(.*)Steam(.*)": " Steam 󰓓 ",
-            "(.*)(.*)": "  ",
         },
         "max-length": 80,
     },
@@ -50,8 +49,8 @@
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% 󰂰",
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -66,7 +65,7 @@
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
         "on-click-middle": "~/.config/hypr/scripts/volume.sh --toggle-mic",
