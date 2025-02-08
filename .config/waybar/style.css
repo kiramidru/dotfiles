@@ -4,10 +4,10 @@
 @define-color selected-fg #E8E3E3;
 
 * {
-    font-family: "JetBrains Mono Nerd Font";
-    font-size: 12px;
+    font-family: "Iosevka Nerd Font";
+    font-size: 13px;
     font-weight: bold;
-    min-height: 10px;
+    min-height: 0px;
 }
 
 window#waybar {
@@ -37,12 +37,11 @@ tooltip label {
     color: @main-fg;
     background: @main-bg;
     opacity: 1;
-    margin: 12px 0px 12px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 #workspaces {
     border-radius: 48px 0px 0px 48px;
-    margin-left: 4px;
 }
 
 #workspaces button {
@@ -107,7 +106,6 @@ tooltip label {
 #custom-swaync {
     border-radius: 48px;
     margin-left: 4px;
-    margin-right: 4px;
-    padding-left: 11px;
-    padding-right: 13px;
+    padding-left: 12px;
+    padding-right: 15px;
 }
