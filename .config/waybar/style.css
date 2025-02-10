@@ -1,7 +1,7 @@
-@define-color main-bg #0A0A0A;
-@define-color main-fg #E8E3E3;
-@define-color selected-bg #B86467;
-@define-color selected-fg #E8E3E3;
+@define-color main-bg #DAD3C1;
+@define-color main-fg #1D1B17;
+@define-color selected-bg #1D1B17;
+@define-color selected-fg #DAD3C1;
 
 * {
     font-family: "Iosevka Nerd Font";
