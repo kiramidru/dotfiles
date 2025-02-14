@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.hyprland = {
     enable = true;
     # Deprecated
@@ -10,7 +8,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   environment.systemPackages = with pkgs; [
@@ -24,7 +22,6 @@
     networkmanager
     playerctl
     rofi-wayland
-    scrcpy
     swaynotificationcenter
     swww
     waybar

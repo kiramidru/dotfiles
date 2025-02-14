@@ -1,10 +1,8 @@
-{pkgs, ...}:
-
-{
+{pkgs, ...}: {
   # postgres
   services.postgresql = {
     enable = true;
-    ensureDatabases = [ "mydatabase" ];
+    ensureDatabases = ["mydatabase"];
     enableTCPIP = true;
     # port = 5432;
     authentication = pkgs.lib.mkOverride 10 ''

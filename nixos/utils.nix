@@ -1,6 +1,4 @@
-{ pkgs, inputs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     fzf
     git
@@ -8,6 +6,7 @@
     neofetch
     postman
     ripgrep
+    scrcpy
     starship
     stow
     unzip

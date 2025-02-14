@@ -7,12 +7,16 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = {
+    self,
+    nixpkgs,
+  }: {
     nixosConfigurations = {
       # This should correspond to the hostname of the machine
       kira = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./android.nix
           ./auto-upgrade.nix
           ./bootloader.nix
           ./configuration.nix

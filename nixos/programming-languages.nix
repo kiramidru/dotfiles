@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # C
     gcc
@@ -15,6 +13,8 @@
     lua
     # Javascript
     nodejs
+    # Python
+    python314
     # Ruby
     ruby
     # Rust
