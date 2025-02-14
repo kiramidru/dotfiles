@@ -9,6 +9,7 @@
     packages = with pkgs; [
       ani-cli
       beeper
+      blender
       clickup
       discord
       firefox-devedition
