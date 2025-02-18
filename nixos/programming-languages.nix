@@ -13,6 +13,7 @@
     lua
     # Javascript
     nodejs
+    pnpm
     # Python
     python314
     # Ruby

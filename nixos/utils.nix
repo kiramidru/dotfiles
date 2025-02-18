@@ -13,4 +13,9 @@
     yazi
     zed-editor
   ];
+
+  environment.etc."vuetorrent" = {
+    source = pkgs.vuetorrent;
+    target = "vuetorrent";
+  };
 }
