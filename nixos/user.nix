@@ -8,7 +8,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       ani-cli
-      aseprite
       beeper
       blender
       clickup

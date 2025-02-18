@@ -1,7 +1,9 @@
-{ stdenv
-, lib
-, fetchzip
+{
+  stdenv,
+  fetchzip,
+  ...
 }:
+
 stdenv.mkDerivation rec {
   pname = "vuetorrent";
   version = "1.5.7";
