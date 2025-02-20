@@ -19,7 +19,6 @@
           ./android.nix
           ./auto-upgrade.nix
           ./bootloader.nix
-          ./cascadeur.nix  
           ./configuration.nix
           ./cyber.nix
           ./database.nix

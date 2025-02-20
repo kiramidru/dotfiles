@@ -15,4 +15,12 @@
       host all       all     ::1/128        trust
     '';
   };
+  services.cassandra = {
+    enable = true;
+    listenAddress = "127.0.0.1";
+    rpcAddress = "127.0.0.1";
+    extraConfig = {
+      start_native_transport = true;
+    };
+  };
 }

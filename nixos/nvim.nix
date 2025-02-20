@@ -10,6 +10,7 @@
     lua-language-server
     rust-analyzer
     erlang-ls
+    eslint
     kotlin-language-server
     nil
     pyright
