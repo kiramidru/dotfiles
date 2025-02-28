@@ -32,6 +32,7 @@
           ./hyprland.nix
           ./internationalisation.nix
           ./keyboard.nix
+          ./machine-learning.nix
           ./networking.nix
           # ./nvidia.nix
           ./nvim.nix

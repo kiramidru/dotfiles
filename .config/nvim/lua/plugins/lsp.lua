@@ -18,6 +18,9 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+            lspconfig.asm_lsp.setup({
+                capabilities = capabilities,
+            })
 			lspconfig.erlangls.setup({
 				capabilities = capabilities,
 			})
@@ -34,12 +37,6 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
-				settings = {
-					rust_analyzer = {
-						checkOnSave = false,
-						diagnostics = false,
-					},
-				},
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({

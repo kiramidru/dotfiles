@@ -1,9 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    alsa-lib
     fzf
     git
     kitty
-    neofetch
+    pkg-config
     postman
     ripgrep
     scrcpy
@@ -11,6 +12,5 @@
     stow
     unzip
     yazi
-    zed-editor
   ];
 }
