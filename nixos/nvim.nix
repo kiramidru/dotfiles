@@ -7,10 +7,12 @@
   # LSPs
   programs.nix-ld.libraries = with pkgs; [
     ansible-language-server
+    vscode-langservers-extracted
     lua-language-server
     rust-analyzer
     erlang-ls
     eslint
+    eslint_d
     kotlin-language-server
     nil
     pyright
