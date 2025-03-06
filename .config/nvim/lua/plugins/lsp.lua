@@ -26,12 +26,6 @@ return {
 			})
             lspconfig.eslint.setup({
                 capabilities = capabilities,
-                on_attach = function (client, bufnr)
-                    vim.api.nvim_create_autocmd("BufWritePre", {
-                        buffer = bufnr,
-                        command = "EslintFixAll",
-                    })
-                end
             })
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
@@ -42,13 +36,16 @@ return {
 			lspconfig.nil_ls.setup({
 				capabilities = capabilities,
 			})
+            lspconfig.phpactor.setup({
+                capabilities = capabilities,
+            })
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.rubocop.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
 

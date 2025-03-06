@@ -20,6 +20,10 @@
     # Javascript
     nodejs
     pnpm
+    # PHP
+    php
+    laravel
+    phpPackages.composer
     # Python
     python314
     # Ruby
