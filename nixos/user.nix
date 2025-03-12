@@ -12,7 +12,6 @@
       blender
       clickup
       discord
-      firefox-devedition
       obsidian
       qbittorrent
       spotify
@@ -22,6 +21,7 @@
       wpsoffice
     ];
   };
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

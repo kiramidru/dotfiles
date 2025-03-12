@@ -13,7 +13,6 @@
     kotlin-language-server
     lua-language-server
     nil
-    vimPlugins.phpactor
     pyright
     rubocop
     rust-analyzer

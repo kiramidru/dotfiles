@@ -2,14 +2,15 @@
   hardware.graphics = {
     enable = true;
   };
-
+  
   services.xserver.videoDrivers = ["nvidia"];
 
+  nixpkgs.config.nvidia.acceptLicense = true;
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
     powerManagement.enable = true;
-    powerManagement.finegrained = true;
+    powerManagement.finegrained = false;
 
     # Use the NVidia open source kernel module
     open = true;

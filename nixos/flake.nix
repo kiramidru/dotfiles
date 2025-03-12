@@ -34,7 +34,7 @@
           ./keyboard.nix
           ./machine-learning.nix
           ./networking.nix
-          # ./nvidia.nix
+          ./nvidia.nix
           ./nvim.nix
           ./open-ssh.nix
           ./printing.nix
