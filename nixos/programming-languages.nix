@@ -13,13 +13,16 @@
     go
     # Java
     jdk
+    maven
+    # Javascript
+    nodejs
+    pnpm
+    electron
+    electron-bin
     # Kotlin
     kotlin
     # Lua
     lua
-    # Javascript
-    nodejs
-    pnpm
     # PHP
     php
     laravel

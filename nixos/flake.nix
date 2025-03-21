@@ -23,6 +23,7 @@
           ./cyber.nix
           ./database.nix
           ./disable-nvidia.nix
+          ./electron.nix
           ./firewall.nix
           ./fonts.nix
           ./garbage.nix

@@ -10,6 +10,7 @@
     erlang-ls
     eslint
     eslint_d
+    jdt-language-server
     kotlin-language-server
     lua-language-server
     nil

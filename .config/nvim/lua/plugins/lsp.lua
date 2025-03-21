@@ -10,6 +10,16 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				auto_installed = true,
+                ensure_installed = {
+                    "erlangls",
+                    "eslint",
+                    "gopls",
+                    "jdtls",
+                    "lua_ls",
+                    "nil_ls",
+                    "pyright",
+                    "rust_analyzer",
+                },
 			})
 		end,
 	},
@@ -18,9 +28,6 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-            lspconfig.asm_lsp.setup({
-                capabilities = capabilities,
-            })
 			lspconfig.erlangls.setup({
 				capabilities = capabilities,
 			})
@@ -30,19 +37,16 @@ return {
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
+            lspconfig.jdtls.setup({
+                capabilities = capabilities,
+            })
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.nil_ls.setup({
 				capabilities = capabilities,
 			})
-            lspconfig.phpactor.setup({
-                capabilities = capabilities,
-            })
 			lspconfig.pyright.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.rubocop.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
