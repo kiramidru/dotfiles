@@ -23,9 +23,9 @@
           ./cyber.nix
           ./database.nix
           ./disable-nvidia.nix
-          ./electron.nix
           ./firewall.nix
           ./fonts.nix
+          ./gaming.nix
           ./garbage.nix
           ./gnome.nix
           ./graphics.nix
@@ -35,7 +35,7 @@
           ./keyboard.nix
           ./machine-learning.nix
           ./networking.nix
-          ./nvidia.nix
+        # ./nvidia.nix
           ./nvim.nix
           ./open-ssh.nix
           ./printing.nix

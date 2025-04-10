@@ -7,17 +7,18 @@
     extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      ani-cli
-      beeper
       blender
       clickup
       discord
+      projectlibre
+      protonvpn-gui
       obsidian
       qbittorrent
       spotify
-      godot_4
       telegram-desktop
+      unityhub
       vlc
+      whatsapp-for-linux
       wpsoffice
     ];
   };

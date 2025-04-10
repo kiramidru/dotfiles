@@ -15,6 +15,8 @@
       host all       all     ::1/128        trust
     '';
   };
+
+  # cassandra
   services.cassandra = {
     enable = true;
     listenAddress = "127.0.0.1";

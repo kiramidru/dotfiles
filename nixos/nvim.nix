@@ -7,6 +7,7 @@
   # LSPs
   programs.nix-ld.libraries = with pkgs; [
     ansible-language-server
+    elixir-ls
     erlang-ls
     eslint
     eslint_d
@@ -15,7 +16,6 @@
     lua-language-server
     nil
     pyright
-    rubocop
     rust-analyzer
     sqls
     terraform-ls

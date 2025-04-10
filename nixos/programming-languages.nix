@@ -4,6 +4,8 @@
     asm-lsp
     # C
     gcc
+    # Elixir
+    elixir
     # Erlang
     erlang
     rebar3
@@ -21,16 +23,13 @@
     electron-bin
     # Kotlin
     kotlin
+    ktor-cli
     # Lua
     lua
     # PHP
     php
     laravel
     phpPackages.composer
-    # Python
-    python314
-    # Ruby
-    ruby
     # Rust
     rustup
     evcxr
