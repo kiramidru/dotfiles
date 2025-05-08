@@ -7,6 +7,7 @@ return {
             sources = {
                 -- Formatting
                 null_ls.builtins.formatting.ktlint,
+                null_ls.builtins.formatting.eslint,
                 null_ls.builtins.formatting.scalafmt,
                 null_ls.builtins.formatting.stylua,
                 null_ls.builtins.formatting.rubocop,

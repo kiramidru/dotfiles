@@ -15,10 +15,11 @@ return {
                     "eslint",
                     "gopls",
                     "jdtls",
+                    "kotlin_language_server",
                     "lua_ls",
-                    "nil_ls",
                     "pyright",
                     "rust_analyzer",
+                    "tailwindcss"
                 },
 			})
 		end,
@@ -40,10 +41,10 @@ return {
             lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
+            lspconfig.kotlin_language_server.setup({
+                capabilities = capabilities,
+            })
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.nil_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
@@ -52,6 +53,9 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+            lspconfig.tailwindcss.setup({
+                capabilities = capabilities,
+            })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

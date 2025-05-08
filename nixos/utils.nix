@@ -9,6 +9,7 @@
     starship
     stow
     unzip
+    wget
     yazi
   ];
 }

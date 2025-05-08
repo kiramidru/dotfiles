@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   # postgres
   services.postgresql = {
-    enable = true;
+    enable = false;
     ensureDatabases = ["mydatabase"];
     enableTCPIP = true;
     # port = 5432;
@@ -18,7 +18,7 @@
 
   # cassandra
   services.cassandra = {
-    enable = true;
+    enable = false;
     listenAddress = "127.0.0.1";
     rpcAddress = "127.0.0.1";
     extraConfig = {
