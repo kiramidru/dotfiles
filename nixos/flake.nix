@@ -25,7 +25,6 @@
           ./disable-nvidia.nix
           ./firewall.nix
           ./fonts.nix
-          ./gaming.nix
           ./garbage.nix
           ./gnome.nix
           ./graphics.nix

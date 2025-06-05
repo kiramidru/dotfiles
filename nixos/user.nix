@@ -10,8 +10,6 @@
       blender
       clickup
       discord
-      projectlibre
-      protonvpn-gui
       obsidian
       qbittorrent
       spotify
@@ -19,7 +17,6 @@
       unityhub
       vlc
       whatsapp-for-linux
-      wpsoffice
     ];
   };
   programs.firefox.enable = true;
