@@ -10,11 +10,11 @@
       blender
       clickup
       discord
+      godot
       obsidian
       qbittorrent
       spotify
       telegram-desktop
-      unityhub
       vlc
       whatsapp-for-linux
     ];

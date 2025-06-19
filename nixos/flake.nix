@@ -20,7 +20,7 @@
           ./auto-upgrade.nix
           ./bootloader.nix
           ./configuration.nix
-          ./cyber.nix
+        # ./cyber.nix
           ./database.nix
           ./disable-nvidia.nix
           ./firewall.nix
