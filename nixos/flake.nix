@@ -5,12 +5,18 @@
     # If you want to use the latest upstream version, I recommend using
     # branch "nixos-unstable" instead of "23.11" (the latest stable release).
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
     self,
     nixpkgs,
+    spicetify-nix
   }: {
+    imports = [
+      spicetify-nix.nixosModules.default
+    ];
+
     nixosConfigurations = {
       # This should correspond to the hostname of the machine
       kira = nixpkgs.lib.nixosSystem {
@@ -47,6 +53,29 @@
           ./virtualisation.nix
         ];
       };
+    }; 
+
+    programs.spicetify = 
+    let
+      spicePkgs = spicetify-nix.stable;
+    in
+    {
+      enable = true;
+
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+        hidePodcasts
+      ];
+      enabledCustomApps = with spicePkgs.apps; [
+        ncsVisualizer
+      ];
+      enabledSnippets = with spicePkgs.snippets; [
+        rotatingCoverart
+        pointer
+      ];
+
+      theme = spicePkgs.themes.catppuccin;
+      colorScheme = "mocha";
     };
   };
 }
