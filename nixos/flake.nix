@@ -10,13 +10,8 @@
 
   outputs = {
     self,
-    nixpkgs,
-    spicetify-nix
+    nixpkgs
   }: {
-    imports = [
-      spicetify-nix.nixosModules.default
-    ];
-
     nixosConfigurations = {
       # This should correspond to the hostname of the machine
       kira = nixpkgs.lib.nixosSystem {
@@ -54,28 +49,5 @@
         ];
       };
     }; 
-
-    programs.spicetify = 
-    let
-      spicePkgs = spicetify-nix.stable;
-    in
-    {
-      enable = true;
-
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        hidePodcasts
-      ];
-      enabledCustomApps = with spicePkgs.apps; [
-        ncsVisualizer
-      ];
-      enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
-        pointer
-      ];
-
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
-    };
   };
 }
