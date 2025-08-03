@@ -5,12 +5,12 @@
     # If you want to use the latest upstream version, I recommend using
     # branch "nixos-unstable" instead of "23.11" (the latest stable release).
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
     self,
-    nixpkgs
+    nixpkgs,
+    ...
   }: {
     nixosConfigurations = {
       # This should correspond to the hostname of the machine
@@ -23,22 +23,17 @@
           ./configuration.nix
         # ./cyber.nix
           ./database.nix
-          ./disable-nvidia.nix
           ./firewall.nix
           ./fonts.nix
           ./garbage.nix
-          ./gnome.nix
-          ./graphics.nix
           ./hardware-configuration.nix
           ./hyprland.nix
           ./internationalisation.nix
           ./keyboard.nix
-          ./machine-learning.nix
           ./networking.nix
-        # ./nvidia.nix
+          ./nvidia.nix
           ./nvim.nix
           ./open-ssh.nix
-          ./printing.nix
           ./programming-languages.nix
           ./settings.nix
           ./sound.nix

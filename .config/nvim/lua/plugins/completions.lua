@@ -1,13 +1,11 @@
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp",
-	},
-
-	{
 		"hrsh7th/nvim-cmp",
+		dependencies = { "hrsh7th/cmp-nvim-lsp" },
 
 		config = function()
 			local cmp = require("cmp")
+
 			cmp.setup({
 				window = {
 					completion = cmp.config.window.bordered(),

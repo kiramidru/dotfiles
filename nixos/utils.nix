@@ -5,11 +5,11 @@
     kitty
     postman
     ripgrep
-    scrcpy
     starship
     stow
     unzip
     wget
     yazi
+    zip
   ];
 }

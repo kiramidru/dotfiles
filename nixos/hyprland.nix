@@ -1,4 +1,13 @@
 {pkgs, ...}: {
+  services.xserver = {
+    enable = true;
+    displayManager.gdm = {
+        enable = true;
+        wayland = true;
+    };
+    excludePackages = with  pkgs; [ xterm ]; # Remove Xterm
+  }; 
+
   programs.hyprland = {
     enable = true;
     # Deprecated
@@ -14,17 +23,18 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     cava
+    deadd-notification-center
     hypridle
-    hyprlock
     hyprshot
     hyprsunset
     mpv
     networkmanager
     playerctl
     rofi-wayland
-    swaynotificationcenter
+    scrcpy
     swww
     waybar
+    wl-clipboard
     wlogout
   ];
 }

@@ -4,5 +4,5 @@ show_hidden = true
 
 [opened]
 edit = [
-    { run = '${EDITOR:=nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+    { run = '${EDITOR} "$@"', desc = "$EDITOR", block = true, for = "unix" },
 ]

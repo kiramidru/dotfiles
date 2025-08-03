@@ -1,4 +1,4 @@
-{pkgs, ...}: { 
+{pkgs, ...}: {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -12,11 +12,13 @@
       blender
       clickup
       discord
-      godot
+      google-chrome
+      morgen
       obsidian
       qbittorrent
       spotify
       telegram-desktop
+      unityhub
       vlc
       whatsapp-for-linux
     ];
