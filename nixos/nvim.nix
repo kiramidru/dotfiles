@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
@@ -6,9 +7,22 @@
 
   # LSPs
   programs.nix-ld.libraries = with pkgs; [
+    # Lua
     lua-language-server
+    stylua
+
+    # Nix
     nil
-    pyright
-    sqls
+    nixfmt
+  ];
+
+  environment.systemPackages = with pkgs; [
+    # Lua
+    lua-language-server
+    stylua
+
+    # Nix
+    nil
+    nixfmt
   ];
 }

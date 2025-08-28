@@ -1,29 +1,26 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
+  services.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
   services.xserver = {
     enable = true;
-    displayManager.gdm = {
-        enable = true;
-        wayland = true;
-    };
-    excludePackages = with  pkgs; [ xterm ]; # Remove Xterm
-  }; 
+    excludePackages = with pkgs; [ xterm ]; # Remove Xterm
+  };
 
   programs.hyprland = {
     enable = true;
-    # Deprecated
-    # nvidiaPatches = true;
     xwayland.enable = true;
   };
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   environment.systemPackages = with pkgs; [
     brightnessctl
     cava
-    deadd-notification-center
     hypridle
     hyprshot
     hyprsunset

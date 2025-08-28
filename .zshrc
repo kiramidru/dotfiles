@@ -15,3 +15,5 @@ eval "$(starship init zsh)"
 
 # Keybindings
 bindkey -e
+
+export PATH=$PATH:/home/kira/.spicetify

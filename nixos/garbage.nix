@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   # Optimize storage and automatic scheduled GC running
   # If you want to run GC manually, use commands:
   # `nix-store --optimize` for finding and eliminating redundant copies of identical store paths
@@ -9,6 +9,6 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 7d";
+    options = "--delete-older-than 30d";
   };
 }

@@ -1,9 +1,5 @@
-{config, ...}: {
-  hardware.graphics = {
-    enable = true;
-  };
-  
-  services.xserver.videoDrivers = ["nvidia"];
+{ config, ... }: {
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   nixpkgs.config.nvidia.acceptLicense = true;
   hardware.nvidia = {

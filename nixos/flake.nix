@@ -7,42 +7,42 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  }: {
-    nixosConfigurations = {
-      # This should correspond to the hostname of the machine
-      kira = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./android.nix
-          ./auto-upgrade.nix
-          ./bootloader.nix
-          ./configuration.nix
-        # ./cyber.nix
-          ./database.nix
-          ./firewall.nix
-          ./fonts.nix
-          ./garbage.nix
-          ./hardware-configuration.nix
-          ./hyprland.nix
-          ./internationalisation.nix
-          ./keyboard.nix
-          ./networking.nix
-          ./nvidia.nix
-          ./nvim.nix
-          ./open-ssh.nix
-          ./programming-languages.nix
-          ./settings.nix
-          ./sound.nix
-          ./time.nix
-          ./user.nix
-          ./utils.nix
-          ./virtualisation.nix
-        ];
+  outputs =
+    { nixpkgs, ... }:
+    {
+      nixosConfigurations = {
+        # This should correspond to the hostname of the machine
+        kira = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./ags.nix
+            ./android.nix
+            ./auto-upgrade.nix
+            ./bootloader.nix
+            ./configuration.nix
+            # ./cyber.nix
+            ./database.nix
+            ./firewall.nix
+            ./fonts.nix
+            ./graphics.nix
+            ./garbage.nix
+            ./hardware-configuration.nix
+            ./hyprland.nix
+            ./internationalisation.nix
+            ./keyboard.nix
+            ./networking.nix
+            ./nvidia.nix
+            ./nvim.nix
+            ./open-ssh.nix
+            ./programming-languages.nix
+            ./settings.nix
+            ./sound.nix
+            ./time.nix
+            ./user.nix
+            ./utils.nix
+            ./virtualisation.nix
+          ];
+        };
       };
-    }; 
-  };
+    };
 }
