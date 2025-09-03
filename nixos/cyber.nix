@@ -1,7 +1,8 @@
 # Taken from https://github.com/NixOS/nixpkgs/issues/81418
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
+  # Cyber
   environment.systemPackages = with pkgs; [
-    # Taken from https://github.com/NixOS/nixpkgs/issues/81418
     bat
     ranger
 
@@ -50,9 +51,6 @@
     hashcat
     hcxtools
     john
-    # python36Packages.patator
-    phrasendrescher
-    thc-hydra
 
     ### Reverse ###
     binutils

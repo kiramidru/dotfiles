@@ -1,5 +1,10 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.android-studio];
+{ pkgs, ... }:
+{
+  # Android Studio
+  environment.systemPackages = [ pkgs.android-studio ];
   programs.adb.enable = true;
-  users.users.kira.extraGroups = ["kvm" "abdusers"];
+  users.users.kira.extraGroups = [
+    "kvm"
+    "abdusers"
+  ];
 }

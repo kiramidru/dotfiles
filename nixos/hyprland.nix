@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
+  # Hyprland
   services.displayManager.gdm = {
     enable = true;
     wayland = true;
@@ -20,15 +22,13 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
-    cava
+    eww
     hypridle
     hyprshot
-    hyprsunset
     mpv
-    networkmanager
     playerctl
+    polkit_gnome
     rofi-wayland
-    scrcpy
     swww
     waybar
     wl-clipboard

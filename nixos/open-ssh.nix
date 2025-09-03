@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
@@ -6,7 +7,7 @@
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
-      AllowUsers = ["kira"];
+      AllowUsers = [ "kira" ];
     };
   };
 }

@@ -2,8 +2,6 @@
   description = "NixOS System Configuration";
 
   inputs = {
-    # If you want to use the latest upstream version, I recommend using
-    # branch "nixos-unstable" instead of "23.11" (the latest stable release).
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
@@ -15,7 +13,6 @@
         kira = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./ags.nix
             ./android.nix
             ./auto-upgrade.nix
             ./bootloader.nix
@@ -30,6 +27,7 @@
             ./hyprland.nix
             ./internationalisation.nix
             ./keyboard.nix
+            ./laptop.nix
             ./networking.nix
             ./nvidia.nix
             ./nvim.nix
