@@ -29,5 +29,4 @@
     };
   };
   powerManagement.powertop.enable = true;
-  hardware.cpu.amd_energy_perf_bias = "power";
 }

@@ -1,14 +1,4 @@
-# Notifications
-swaync &
-
-# Window Bar
 waybar &
-
-# Wallpapers
+hyprctl setcursor Bibata-Original-Ice 24 &
+mako &
 swww-daemon &
-
-#Authentication
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-# Cursor
-hyprctl setcursor Bibata-Classic-Ice 24

@@ -1,0 +1,7 @@
+font=Iosevka 10
+padding=10
+background-color=#990011CC
+text-color=#FCF6F6FF
+border-size=0
+border-radius=5
+default-timeout=5000
