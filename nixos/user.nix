@@ -20,7 +20,6 @@
       obsidian
       postman
       qbittorrent
-      spotify
       telegram-desktop
       todoist-electron
       unityhub
