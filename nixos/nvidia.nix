@@ -1,13 +1,15 @@
 { config, ... }:
 {
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "nvidia"
+  ];
 
   nixpkgs.config.nvidia.acceptLicense = true;
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
     powerManagement.enable = true;
-    powerManagement.finegrained = false;
 
     # Use the NVidia open source kernel module
     open = true;
@@ -23,6 +25,7 @@
       sync.enable = true;
       # Bus ID of the NVIDIA GPU
       nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:6:0:0";
     };
   };
 }

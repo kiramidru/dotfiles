@@ -10,6 +10,11 @@
     excludePackages = with pkgs; [ xterm ]; # Remove Xterm
   };
 
+  environment.variables = {
+    XCURSOR_THEME = "Bibata-Original-Ice";
+    XCURSOR_SIZE = "24";
+  };
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

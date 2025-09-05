@@ -1,12 +1,5 @@
 { ... }:
 {
-  services.tlp = {
-    enable = true;
-    cpuFreqGovernor = "none";
-    diskIdleTimeout = 120;
-    wifiPowerSave = "enable";
-    enableBluetooth = false;
-  };
   services.auto-cpufreq = {
     enable = true;
     settings = {
@@ -19,13 +12,6 @@
         governor = "performance";
         turbo = "auto";
       };
-    };
-  };
-  services.laptopModeTools = {
-    enable = true;
-    settings = {
-      enableOnAC = false;
-      lmAcquireDevices = true;
     };
   };
   powerManagement.powertop.enable = true;

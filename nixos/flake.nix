@@ -35,6 +35,7 @@
             ./programming-languages.nix
             ./settings.nix
             ./sound.nix
+            ./spotify.nix
             ./time.nix
             ./user.nix
             ./utils.nix
