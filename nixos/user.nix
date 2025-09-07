@@ -11,7 +11,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       blender
-      bluemail
       clickup
       discord
       gimp3
@@ -23,8 +22,6 @@
       telegram-desktop
       todoist-electron
       unityhub
-      waydroid
-      yacreader
     ];
   };
 

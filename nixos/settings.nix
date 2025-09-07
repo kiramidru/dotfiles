@@ -6,6 +6,6 @@
       "flakes"
     ];
   };
-  programs.direnv.enable = true; # Shell environment management
+  # programs.direnv.enable = true;
   environment.variables.EDITOR = "nvim"; # Default Editor
 }

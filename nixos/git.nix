@@ -13,4 +13,7 @@
       }}";
     };
   };
+
+  # Libsecret Storage
+  programs.gnome-keyring.enable = true;
 }

@@ -17,10 +17,6 @@ function toggle_menu {
     fi
 }
 
-function close_osd {
-    notify-send asd
-}
-
 picker() {
     COLOR=$(distrobox-enter -n Arch -- hyprpicker -n | grep "#") &&
     wl-copy --trim-newline $COLOR

@@ -1,5 +1,7 @@
 { ... }:
 {
   # Enable docker.
-  virtualisation.docker.enable = true;
+  # virtualisation = {
+  # docker.enable = true;
+  # };
 }

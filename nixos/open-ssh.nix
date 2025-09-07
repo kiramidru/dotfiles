@@ -8,6 +8,7 @@
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "kira" ];
+      Port = 2222;
     };
   };
 }

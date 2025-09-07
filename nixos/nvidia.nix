@@ -12,7 +12,7 @@
     powerManagement.enable = true;
 
     # Use the NVidia open source kernel module
-    open = true;
+    open = false;
 
     # Enable the Nvidia settings menu,
     # accessible via `nvidia-settings`.

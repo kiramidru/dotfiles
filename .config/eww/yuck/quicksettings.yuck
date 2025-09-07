@@ -180,7 +180,6 @@
     :space-evenly false
     (box
         :class "profile-picture module" 
-        :style "background-image: url('${EWW_CONFIG_DIR}/${profile_picture}')"
         (box
             :class "darkened"
             :orientation "v"

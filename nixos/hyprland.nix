@@ -5,10 +5,11 @@
     enable = true;
     wayland = true;
   };
-  services.xserver = {
-    enable = true;
-    excludePackages = with pkgs; [ xterm ]; # Remove Xterm
-  };
+
+  # services.xserver = {
+  # enable = true;
+  # excludePackages = with pkgs; [ xterm ]; # Remove Xterm
+  # };
 
   environment.variables = {
     XCURSOR_THEME = "Bibata-Original-Ice";
@@ -27,16 +28,24 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    btop
     eww
-    hypridle
-    hyprshot
+    foot
+    grim
     mpv
+    networkmanager_dmenu
+    pavucontrol
     playerctl
     polkit_gnome
-    rofi-wayland
+    slurp
+    swappy
+    swayidle
+    swaylock-effects
     swww
+    rofi-wayland
     waybar
     wl-clipboard
     wlogout
+    yazi
   ];
 }

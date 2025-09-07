@@ -141,24 +141,23 @@
         :class "leftBar"
         :space-evenly false
         (panel_launcher)
-        (panel_clock)
         (panel_window)
-        (panel_media)
     )
     (box 
-      :valign "center" 
-      :halign "end"
-      :class "centerBar"
-       
+        :valign "center" 
+        :halign "end"
+        :class "centerBar"  
+        (panel_media)
+        (panel_colorpicker)
     )
     (box
         :class "righBar"
         :space-evenly false
         :halign "end"
         :hexpand true
-        (panel_colorpicker)
         (panel_system-indicators)
         (panel_notifications)
+        (panel_clock)
         (panel_powermenu)
     )
 ))
