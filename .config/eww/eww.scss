@@ -1,18 +1,9 @@
 * {
     all: unset;
     font-size: 14px;
-    font-family: 'Ubuntu Nerd Font';
-    transition: 200ms;
+    font-family: "Iosevka Nerd Font";
 }
-$mono_font: 'mononoki NF';
 
 @import "./scss/colors.scss";
-@import "./scss/variables.scss";
 @import "./scss/common.scss";
-@import "./scss/panel.scss";
-@import "./scss/datemenu.scss";
-@import "./scss/quicksettings.scss";
-@import "./scss/powermenu.scss";
-@import "./scss/desktop.scss";
-@import "./scss/osd.scss";
-tooltip{ @include tooltip }
+@import "./scss/bar.scss";

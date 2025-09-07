@@ -46,6 +46,7 @@
     waybar
     wl-clipboard
     wlogout
+    wmctrl
     yazi
   ];
 }
