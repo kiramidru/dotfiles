@@ -1,56 +1,39 @@
 .launcher {
-  margin-left: 4px;
   margin-top: 4px;
-  padding: 6px 10px;
-  border-radius: 16px;
-  label {
-    font-size: 1.3em;
-  }
+  margin-left: 4px;
 }
 
 .workspaces {
-  margin-left: 4px;
   margin-top: 4px;
-  padding: 15px 16px;
-  border-radius: 16px;
-  background: black;
+  margin-left: 4px;
+  padding: 14px;
   button {
-    padding: 4px;
-    background: white;
     border-radius: 9999px;
   }
-}
-
-.colorpicker {
-  margin-top: 4px;
-  padding: 0 8px;
-  label {
-    font-size: 20px;
+  button.active {
+    background-color: $fg_color;
+    padding: 4px 36px;
   }
-}
-
-.window {
-  margin: 0 4px;
-  background-color: $bg-color;
-  color: white;
-  padding: 10px;
-  min-width: 240px;
-  border-radius: 0 0 20px 20px;
-  label {
-    font-size: 14px;
+  button.inactive {
+    background-color: #3f3a3a;
+    padding: 4px;
   }
 }
 
 .clock {
-  margin-right: 4px;
   margin-top: 4px;
-  padding: 8px 20px;
+  margin-right: 4px;
+  padding: 8px 14px;
 }
 
-.powermenu {
-  margin-right:2px;
-  padding: 2px 12px;
-  label {
-    font-size: 16px;
-  }
+.battery {
+  margin-top: 4px;
+  margin-right: 4px;
+  padding-left: 12px;
+  padding-right: 14px;
+}
+
+.notification {
+  margin-top: 4px;
+  margin-right: 4px;
 }

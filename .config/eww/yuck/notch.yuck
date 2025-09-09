@@ -1,0 +1,79 @@
+(defwidget panel_media []
+    (box
+        :valign "start"
+        (button
+            :class "button media"
+            :onclick "${EWW_CONFIG_DIR}/scripts/media"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/vinyl.svg")
+        )
+))
+
+(defwidget panel_notch []
+    (box :class "notch-bar"
+        :valign "start"
+        (notch_home)
+        (notch_power)
+))
+
+(defwidget notch_home []
+    (box 
+        :class "home"
+        :visible {notch_state == "home" ? true : false}
+        (label :text window)
+))
+
+(defwidget notch_power []
+    (box
+        :class "power"
+        :visible {notch_state == "power" ? true : false}
+
+        (button 
+            :class "poweroptions"
+            :onclick "hyprlock"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/lock.svg")
+        )
+        (button
+            :class "poweroptions"
+            :onclick "systemctl suspend"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/sleep.svg")
+        )
+        (button
+            :class "poweroptions"
+            :onclick "hyprctl dispatch exit"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/logout.svg")
+        )
+        (button
+            :class "poweroptions"
+            :onclick "systemctl reboot"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/restart.svg")
+        )
+        (button
+            :class "poweroptions"
+            :onclick "systemctl poweroff"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/power-off.svg")
+        )
+))
+
+(defwidget panel_network [] 
+    (box
+        :valign "start"
+        (button
+            :class "button network"
+            :onclick "${EWW_CONFIG_DIR}/scripts/launchers/network.sh"
+            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/network.svg")
+    )
+))
+
+(defwidget notch [] (box
+    :class "center"
+    (box 
+        :class "centerBar" 
+        :valign "start" 
+        :halign "center"
+        :space-evenly false
+        :vexpand true
+        (panel_media)
+        (panel_notch)
+        (panel_network)
+    )
+))

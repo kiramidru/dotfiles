@@ -1,0 +1,60 @@
+(defwidget panel_launcher [] (box
+    (button
+        :class "button launcher"
+        :onclick "${EWW_CONFIG_DIR}/scripts/launcher applauncher"
+        (image :path "/home/kira/dotfiles/.config/eww/assets/icons/nixos.svg")
+    )
+))
+
+(defwidget panel_workspaces []
+  (box :class "box workspaces"
+       :orientation "h"
+       :space-evenly false
+       :halign "start"
+       :spacing 12
+        (for ws in workspace_list
+            (button
+                :class {active_workspace == ws ? "active" : "inactive"}
+                :onclick "eww update active_workspace=${ws} &)"
+    ))
+))
+
+(defwidget panel_clock [] (box :class "box clock"
+    (label  :text panel_clock)
+))
+
+(defwidget panel_battery [] (box :class "box battery"
+    (image :path {battery[0] == "Charging" ? "${EWW_CONFIG_DIR}/assets/icons/battery-charging.svg" : "${EWW_CONFIG_DIR}/assets/icons/battery.svg"}
+    )
+    (label :text "${battery[1]}%")
+))
+
+(defwidget panel_notification [] (box
+    (button
+        :class "button notification"
+        :onclick "${EWW_CONFIG_DIR}/scripts/notification/"
+        (image :path "/home/kira/dotfiles/.config/eww/assets/icons/notification.svg")
+    )
+))
+
+(defwidget bar [] (box
+    :class "centerBox"
+    :width 100
+    (box
+        :class "leftBar"
+        :valign "start"
+        :halign "start"
+        :space-evenly false
+        (panel_launcher)
+        (panel_workspaces)
+    )
+    (box
+        :class "rightBar"
+        :valign "start"
+        :halign "end" 
+        :space-evenly false
+        (panel_clock)
+        (panel_battery)
+        (panel_notification)
+    )
+))

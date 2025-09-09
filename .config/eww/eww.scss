@@ -1,9 +1,11 @@
 * {
     all: unset;
     font-size: 14px;
+    font-weight: 500;
     font-family: "Iosevka Nerd Font";
 }
 
 @import "./scss/colors.scss";
 @import "./scss/common.scss";
 @import "./scss/bar.scss";
+@import "./scss/notch.scss";

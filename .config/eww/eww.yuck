@@ -1,5 +1,6 @@
 (defvar main_monitor 0)
 
-(include "./yuck/panel.yuck")
+(include "./yuck/bar.yuck")
+(include "./yuck/notch.yuck")
 (include "./yuck/vars.yuck")
 (include "./yuck/window.yuck")
