@@ -1,79 +1,145 @@
 (defwidget panel_media []
-    (box
+    (button
+        :class "media_button"
         :valign "start"
-        (button
-            :class "button media"
-            :onclick "${EWW_CONFIG_DIR}/scripts/media"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/vinyl.svg")
-        )
-))
+        :onclick "${EWW_CONFIG_DIR}/scripts/launcher.sh media"
+        (image :path "${EWW_CONFIG_DIR}/assets/icons/vinyl.svg")
+    )
+)
 
 (defwidget panel_notch []
-    (box :class "notch-bar"
+    (box 
+        :class "notch_box"
         :valign "start"
         (notch_home)
+        (notch_media)
+        (notch_network)
+        (notch_notification)
         (notch_power)
-))
+    )
+)
 
 (defwidget notch_home []
     (box 
-        :class "home"
+        :class "home_box"
         :visible {notch_state == "home" ? true : false}
         (label :text window)
-))
+    )
+)
+
+(defwidget notch_media []
+    (box 
+        :class "media_box"
+        :orientation "h"
+        :width 360
+        :visible {notch_state == "media" ? true : false}
+
+        (image
+            :path {media_art}
+            :image-height 80
+            :preserve-aspect-ratio true
+        )
+        (box
+            :orientation "v"
+            :space-evenly false
+            (box
+                :orientation "v"
+                :space-evenly false
+                :spacing 6
+                (label :text {media.title} :limit-width 36)
+                (label :text {media.artist} :limit-width 36)
+            )
+            (box
+                (button
+                    :class "media_control"
+                    :onclick "playerctl --player=spotify previous"
+                    (image :path "${EWW_CONFIG_DIR}/assets/icons/media/skip-back.svg")
+                )
+                (button
+                    :class "media_control"
+                    :onclick "playerctl --player=spotify play-pause"
+                    (image :path {media.status == "Playing" ?
+                        "${EWW_CONFIG_DIR}/assets/icons/media/pause.svg" :
+                        "${EWW_CONFIG_DIR}/assets/icons/media/play.svg"}
+                    )
+                )
+                (button
+                    :class "media_control"
+                    :onclick "playerctl --player=spotify next"
+                    (image :path "${EWW_CONFIG_DIR}/assets/icons/media/skip-forward.svg")
+                )
+            )
+        )
+    )
+)
+
+(defwidget notch_network []
+    (box 
+        :class "network_box"
+        :visible {notch_state == "network" ? true : false}
+        (label :text window)
+    )
+)
+
+(defwidget notch_notification []
+    (box 
+        :class "notification_box"
+        :visible {notch_state == "notification" ? true : false}
+        (label :text window)
+    )
+)
 
 (defwidget notch_power []
     (box
-        :class "power"
+        :class "power_box"
         :visible {notch_state == "power" ? true : false}
+        :orientation "h"
 
         (button 
-            :class "poweroptions"
+            :class "power_button"
             :onclick "hyprlock"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/lock.svg")
+            (image :path "${EWW_CONFIG_DIR}/assets/icons/power/lock.svg")
         )
         (button
-            :class "poweroptions"
+            :class "power_button"
             :onclick "systemctl suspend"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/sleep.svg")
+            (image :path "${EWW_CONFIG_DIR}/assets/icons/power/sleep.svg")
         )
         (button
-            :class "poweroptions"
+            :class "power_button"
             :onclick "hyprctl dispatch exit"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/logout.svg")
+            (image :path "${EWW_CONFIG_DIR}/assets/icons/power/logout.svg")
         )
         (button
-            :class "poweroptions"
+            :class "power_button"
             :onclick "systemctl reboot"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/restart.svg")
+            (image :path "${EWW_CONFIG_DIR}/assets/icons/power/restart.svg")
         )
         (button
-            :class "poweroptions"
+            :class "power_button"
             :onclick "systemctl poweroff"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/power-off.svg")
+            (image :path "${EWW_CONFIG_DIR}/assets/icons/power/power-off.svg")
         )
-))
+    )
+)
 
 (defwidget panel_network [] 
-    (box
+    (button
+        :class "network_button"
         :valign "start"
-        (button
-            :class "button network"
-            :onclick "${EWW_CONFIG_DIR}/scripts/launchers/network.sh"
-            (image :path "/home/kira/dotfiles/.config/eww/assets/icons/network.svg")
+        :onclick "${EWW_CONFIG_DIR}/scripts/launcher.sh network"
+        (image :path "${EWW_CONFIG_DIR}/assets/icons/network.svg")
     )
-))
+)
 
-(defwidget notch [] (box
-    :class "center"
+(defwidget notch []
     (box 
-        :class "centerBar" 
+        :class "center_box" 
         :valign "start" 
         :halign "center"
         :space-evenly false
-        :vexpand true
         (panel_media)
         (panel_notch)
         (panel_network)
     )
-))
+)

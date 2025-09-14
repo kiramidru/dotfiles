@@ -1,34 +1,30 @@
-.media {
-  margin-top: 4px;
-  margin-right: 4px;
-}
-
-.notch-bar {
-  padding: 12px;
-  min-width: 300px;
-  border-radius: 0 0 36px 36px;
+.notch_box {
   background-color: $bg-color;
+  border-radius: 0 0 24px 24px;
 }
 
-.home {
-  label {
-    color: white;
+.media_button {
+  @include button(9999px, 8px, 4px, 4px, 0, 0);
+}
+
+.network_button {
+  @include button(9999px, 8px, 4px, 0, 0, 4px);
+}
+
+.home_box {
+  @include box(24px, 12px, 96px, 0, 0, 0, 0);
+}
+
+.power_box {
+  @include box(24px, 16px, 16px, 0, 0, 0, 0);
+  .power_button {
+    @include button(16px, 16px, 4px, 0, 0, 4px);
   }
 }
 
-.power {
-  .poweroptions {
-    margin: 0 2px;
-    border-radius: 20px;
-    padding: 16px;
-  }
-  .poweroptions:hover {
-    background-color: #4c3858;
+.media_box {
+  @include box(24px, 16px, 16px, 0, 0, 0, 0);
+  .media_control {
+    @include button(8px, 8px, 8px, 0, 0, 0);
   }
 }
-
-.network {
-  margin-top: 4px;
-  margin-left: 4px;
-}
-

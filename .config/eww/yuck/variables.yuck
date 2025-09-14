@@ -1,0 +1,12 @@
+(defvar     notch_state       "home")
+
+(defvar     workspace_list    "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]")
+(defvar     window            "kira@nix")
+
+(defpoll    clock_label       :interval "5s"  `date "+%H:%M"`)
+(defpoll    hour              :interval "5s"  `date "+%H"`)
+(defpoll    minutes           :interval "5s"  `date "+%M"`)
+
+(deflisten  active_workspace  :initial  1     `scripts/workspace.sh`)
+(deflisten  media             :initial "{}"   `scripts/media/media.sh`)
+(deflisten  media_art         :initial ""     `scripts/media/media_art.sh`)  

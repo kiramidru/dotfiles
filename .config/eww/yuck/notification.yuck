@@ -1,0 +1,14 @@
+(defwidget notification []
+    (box 
+        :class "notification_box"
+        (image
+        )
+        (label
+            :class "notification-title"
+        )
+        (label
+            :class "notification-message"
+            :wrap true
+        )
+    )
+)

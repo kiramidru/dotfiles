@@ -1,60 +1,73 @@
-(defwidget panel_launcher [] (box
+(defwidget panel_launcher []
     (button
-        :class "button launcher"
-        :onclick "${EWW_CONFIG_DIR}/scripts/launcher applauncher"
-        (image :path "/home/kira/dotfiles/.config/eww/assets/icons/nixos.svg")
+        :class "launcher_button"
+        (image :path "${EWW_CONFIG_DIR}/assets/icons/cross.svg")
     )
-))
+)
 
 (defwidget panel_workspaces []
-  (box :class "box workspaces"
+    (box :class "workspaces"
        :orientation "h"
        :space-evenly false
        :halign "start"
        :spacing 12
-        (for ws in workspace_list
+       (for ws in workspace_list
             (button
                 :class {active_workspace == ws ? "active" : "inactive"}
-                :onclick "eww update active_workspace=${ws} &)"
-    ))
-))
-
-(defwidget panel_clock [] (box :class "box clock"
-    (label  :text panel_clock)
-))
-
-(defwidget panel_battery [] (box :class "box battery"
-    (image :path {battery[0] == "Charging" ? "${EWW_CONFIG_DIR}/assets/icons/battery-charging.svg" : "${EWW_CONFIG_DIR}/assets/icons/battery.svg"}
+                :onclick "hyprctl dispatch workspace ${ws}"
+            )
+       )
     )
-    (label :text "${battery[1]}%")
-))
+)
 
-(defwidget panel_notification [] (box
+(defwidget panel_clock []
+    (box :class "clock_box"
+        (label  :text clock_label)
+    )
+)
+
+(defwidget panel_battery []
+    (box :class "battery_box"
+        (image 
+            :path {EWW_BATTERY.BAT1.status == "Charging" ? "${EWW_CONFIG_DIR}/assets/icons/battery/battery-charging.svg" : 
+            EWW_BATTERY.BAT1.capacity == 100 ? "${EWW_CONFIG_DIR}/assets/icons/battery/battery-4.svg" :
+            EWW_BATTERY.BAT1.capacity >= 66 ? "${EWW_CONFIG_DIR}/assets/icons/battery/battery-3.svg" :
+            EWW_BATTERY.BAT1.capacity >= 33 ? "${EWW_CONFIG_DIR}/assets/icons/battery/battery-2.svg" :
+            EWW_BATTERY.BAT1.capacity >= 10 ? "${EWW_CONFIG_DIR}/assets/icons/battery/battery-1.svg" :
+            "${EWW_CONFIG_DIR}/assets/icons/battery/battery-danger.svg"
+            }
+        )
+        (label :text "${EWW_BATTERY.BAT1.capacity}%")
+    )
+)
+
+(defwidget panel_notification []
     (button
-        :class "button notification"
-        :onclick "${EWW_CONFIG_DIR}/scripts/notification/"
-        (image :path "/home/kira/dotfiles/.config/eww/assets/icons/notification.svg")
+        :class "notification_button"
+        :onclick "${EWW_CONFIG_DIR}/scripts/launcher.sh notification"
+        (image :path "${EWW_CONFIG_DIR}/assets/icons/notification.svg")
     )
-))
+)
 
-(defwidget bar [] (box
-    :class "centerBox"
-    :width 100
+(defwidget bar []
     (box
-        :class "leftBar"
-        :valign "start"
-        :halign "start"
-        :space-evenly false
-        (panel_launcher)
-        (panel_workspaces)
+        :class "center_box"
+        (box
+            :class "left_box"
+            :valign "start"
+            :halign "start"
+            :space-evenly false
+            (panel_launcher)
+            (panel_workspaces)
+        )
+        (box
+            :class "right_box"
+            :valign "start"
+            :halign "end" 
+            :space-evenly false
+            (panel_clock)
+            (panel_battery)
+            (panel_notification)
+        )
     )
-    (box
-        :class "rightBar"
-        :valign "start"
-        :halign "end" 
-        :space-evenly false
-        (panel_clock)
-        (panel_battery)
-        (panel_notification)
-    )
-))
+)

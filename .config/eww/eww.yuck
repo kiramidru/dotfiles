@@ -2,5 +2,6 @@
 
 (include "./yuck/bar.yuck")
 (include "./yuck/notch.yuck")
-(include "./yuck/vars.yuck")
+(include "./yuck/notification.yuck")
+(include "./yuck/variables.yuck")
 (include "./yuck/window.yuck")

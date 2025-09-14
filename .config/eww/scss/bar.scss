@@ -1,39 +1,36 @@
-.launcher {
-  margin-top: 4px;
-  margin-left: 4px;
+.launcher_button {
+  @include button(9999px, 8px, 4px, 0, 0, 4px);
 }
 
 .workspaces {
+  background-color: $bg-color;
+  border-radius: 24px;
   margin-top: 4px;
   margin-left: 4px;
   padding: 14px;
   button {
     border-radius: 9999px;
+    transition: padding 0.3s cubic-bezier(0.5, 2.0, 0.3, 1), background-color 0.3s ease;
   }
   button.active {
-    background-color: $fg_color;
+    background-color: $primary;
     padding: 4px 36px;
   }
   button.inactive {
-    background-color: #3f3a3a;
+    background-color: $disabled;
     padding: 4px;
   }
 }
 
-.clock {
-  margin-top: 4px;
-  margin-right: 4px;
-  padding: 8px 14px;
+.clock_box {
+  @include box(16px, 8px, 16px, 4px, 4px, 0, 0);
 }
 
-.battery {
-  margin-top: 4px;
-  margin-right: 4px;
+.battery_box {
+  @include box(16px, 8px, 16px, 4px, 4px, 0, 0);
   padding-left: 12px;
-  padding-right: 14px;
 }
 
-.notification {
-  margin-top: 4px;
-  margin-right: 4px;
+.notification_button {
+  @include button(9999px, 8px, 4px, 4px, 0, 0);
 }
